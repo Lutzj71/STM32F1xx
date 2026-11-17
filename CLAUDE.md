@@ -47,6 +47,15 @@ albo ST-Link pod adres 0x08007000.
   JP1 2×13 = wolne GPIO 28–33, 49–52 (34/35 to piny startowe), 5 V na JP1 jest wyjściem, nie wejściem.
   Wcześniej błędnie zakładano Smart Panlee ZX3D50CE02S-USRC-4832 (3,5", 480×320, moduł 92×60 mm).
 
+## Powiązane repozytoria
+
+- Firmware panelu (ESP-IDF, LVGL): `..\guition_panel` – https://github.com/Lutzj71/guition_panel
+  (7 ekranów, strumieniowanie z karty SD, Wi-Fi; niezbudowane – brak ESP-IDF; kontekst w jego `CLAUDE.md`).
+  Łącze: UART0 panelu (CN2, GPIO37/38) ↔ USART3 tej płyty (PB10/PB11), 115200.
+  Do sprawdzenia po stronie grblHAL: czy przy `MPG_ENABLE=2` raport statusu zawiera pole `MPG:`
+  i czy płyta odpowiada na USART3 poza trybem MPG.
+- Obudowy: `..\laser_enclosure` – https://github.com/Lutzj71/laser_enclosure (kontekst w jego `CLAUDE.md`).
+
 ## Powiązane materiały
 
 - Obudowy (OpenSCAD) w `..\laser_enclosure`, obie na profil 2040, STL w `stl/`, opis w `README.md`:
